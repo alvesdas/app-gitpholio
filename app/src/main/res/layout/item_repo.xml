@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/layout_half_padding"
+    app:cardElevation="@dimen/layout_half_padding"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvRepoName"
+            android:layout_width="@dimen/dimen_zero"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_padding"
+            android:layout_marginTop="@dimen/layout_padding"
+            android:layout_marginEnd="@dimen/layout_padding"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@sample/repositories.json/data/name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvRepoDescription"
+            android:layout_width="@dimen/dimen_zero"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/layout_padding"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvRepoName"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepoName"
+            tools:text="@sample/repositories.json/data/description" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipStarCount"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_extra_padding"
+            app:chipBackgroundColor="@android:color/transparent"
+            app:chipIcon="@drawable/ic_stars"
+            app:chipIconTint="@color/chip_icon_tint"
+            app:layout_constraintStart_toStartOf="@id/tvRepoName"
+            app:layout_constraintTop_toBottomOf="@id/tvRepoDescription"
+            tools:text="@sample/repositories.json/data/stargazers_count" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvRepoLanguage"
+            android:layout_width="@dimen/dimen_zero"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_quarter_padding"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toEndOf="@+id/tvRepoName"
+            app:layout_constraintStart_toEndOf="@id/chipStarCount"
+            app:layout_constraintTop_toTopOf="@id/chipStarCount"
+            tools:text="@sample/repositories.json/data/language" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
