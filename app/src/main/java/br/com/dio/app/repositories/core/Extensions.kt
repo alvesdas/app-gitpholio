@@ -30,7 +30,7 @@ fun Context.createDialog(block: MaterialAlertDialogBuilder.() -> Unit = {}): Ale
 
 fun Context.createProgressDialog(): AlertDialog {
     return createDialog {
-        val padding = this@createProgressDialog.resources.getDimensionPixelOffset(R.dimen.layout_padding)
+        val padding = this@createProgressDialog.resources.getDimensionPixelOffset(R.dimen.margin_default)
         val progressBar = ProgressBar(this@createProgressDialog)
         progressBar.setPadding(padding, padding, padding, padding)
         setView(progressBar)
