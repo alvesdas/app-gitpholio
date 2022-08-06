@@ -1,4 +1,11 @@
 <resources>
-    <string name="app_name">App Repositories</string>
-    <string name="action_search">Pesquisar</string>
+    <string name="app_name">Gitpholio</string>
+
+    <string name="action_search">Search</string>
+
+    <string name="label_open_link">Open</string>
+    <string name="label_how_to">Search for a GitHub username and check their repositories</string>
+
+    <string name="cd_owner_image">Repository owner image</string>
+    <string name="cd_repository_icon_background">Repository icon</string>
 </resources>

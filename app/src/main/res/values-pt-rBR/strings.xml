@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gitpholio</string>
+    <string name="action_search">Pesquisar</string>
+
+    <string name="label_open_link">Abrir</string>
+    <string name="label_how_to">Pesquise um usuário do GitHub e veja seus repositórios</string>
+
+    <string name="cd_owner_image">Imagem do proprietário do repositório</string>
+    <string name="cd_repository_icon_background">Símbolo de um repositório</string>
+</resources>

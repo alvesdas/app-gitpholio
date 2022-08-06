@@ -37,7 +37,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/margin_default_half"
         android:paddingHorizontal="@dimen/margin_default_extra"
-        android:text="@string/label_on_launcher"
+        android:text="@string/label_how_to"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
