@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
+import androidx.core.view.isVisible
 import br.com.dio.app.repositories.R
 import br.com.dio.app.repositories.core.createDialog
 import br.com.dio.app.repositories.core.createProgressDialog
@@ -37,6 +38,8 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
                 is MainViewModel.State.Success -> {
                     dialog.dismiss()
                     adapter.submitList(it.list)
+                    binding.ivIconBackground.isVisible = false
+                    binding.tvTextBackground.isVisible = false
                 }
             }
 

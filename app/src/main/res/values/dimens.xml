@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="layout_half_padding">8dp</dimen>
-    <dimen name="layout_padding">16dp</dimen>
-    <dimen name="layout_extra_padding">32dp</dimen>
-    <dimen name="layout_quarter_padding">4dp</dimen>
     <dimen name="dimen_zero">0dp</dimen>
+
+    <dimen name="margin_default_quarter">4dp</dimen>
+    <dimen name="margin_default_half">8dp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_default_extra">32dp</dimen>
+    <dimen name="margin_default_extra_plus">48dp</dimen>
+
+    <dimen name="margin_half_and_two">10dp</dimen>
 </resources>

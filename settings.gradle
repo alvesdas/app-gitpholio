@@ -1,2 +1,2 @@
-rootProject.name = "App Repositories"
+rootProject.name = "Gitpholio"
 include ':app'

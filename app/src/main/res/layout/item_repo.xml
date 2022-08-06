@@ -4,29 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="@dimen/layout_half_padding"
-    app:cardElevation="@dimen/layout_half_padding"
+    android:layout_marginHorizontal="@dimen/margin_default_quarter"
+    app:cardCornerRadius="@dimen/margin_default_half"
+    app:cardElevation="@dimen/margin_default_half"
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ivIcon"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="@dimen/margin_default_half"
+            android:layout_marginTop="@dimen/margin_default_half"
+            android:contentDescription="@string/cd_owner_image"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
             tools:src="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/btOpenLink"
+            android:layout_width="80dp"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/label_open_link"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/ivIcon"
+            app:layout_constraintStart_toStartOf="@id/ivIcon"
+            app:layout_constraintTop_toBottomOf="@id/ivIcon" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvRepoName"
             android:layout_width="@dimen/dimen_zero"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/layout_padding"
-            android:layout_marginTop="@dimen/layout_padding"
-            android:layout_marginEnd="@dimen/layout_padding"
+            android:layout_marginStart="@dimen/margin_default_half"
+            android:layout_marginTop="@dimen/margin_default_half"
+            android:layout_marginEnd="@dimen/margin_default_half"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivIcon"
@@ -37,10 +54,9 @@
             android:id="@+id/tvRepoDescription"
             android:layout_width="@dimen/dimen_zero"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/layout_padding"
             android:ellipsize="end"
-            android:maxLines="2"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:maxLines="3"
+            app:layout_constraintEnd_toEndOf="@id/tvRepoName"
             app:layout_constraintStart_toStartOf="@+id/tvRepoName"
             app:layout_constraintTop_toBottomOf="@+id/tvRepoName"
             tools:text="@sample/repositories.json/data/description" />
@@ -48,27 +64,27 @@
         <com.google.android.material.chip.Chip
             android:id="@+id/chipStarCount"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/layout_extra_padding"
+            android:layout_height="@dimen/margin_default_extra_plus"
             app:chipBackgroundColor="@android:color/transparent"
             app:chipIcon="@drawable/ic_stars"
             app:chipIconTint="@color/chip_icon_tint"
+            app:layout_constraintBottom_toBottomOf="@id/btOpenLink"
             app:layout_constraintStart_toStartOf="@id/tvRepoName"
-            app:layout_constraintTop_toBottomOf="@id/tvRepoDescription"
             tools:text="@sample/repositories.json/data/stargazers_count" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvRepoLanguage"
             android:layout_width="@dimen/dimen_zero"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/layout_quarter_padding"
+            android:layout_marginTop="@dimen/margin_default_quarter"
+            android:layout_marginBottom="@dimen/margin_half_and_two"
             android:ellipsize="end"
             android:maxLines="2"
             android:textAlignment="textEnd"
+            app:layout_constraintBottom_toBottomOf="@id/chipStarCount"
             app:layout_constraintEnd_toEndOf="@+id/tvRepoName"
             app:layout_constraintStart_toEndOf="@id/chipStarCount"
-            app:layout_constraintTop_toTopOf="@id/chipStarCount"
             tools:text="@sample/repositories.json/data/language" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

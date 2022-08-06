@@ -4,21 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".ui.MainActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/SearchViewStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/app_name" />
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/ivIconBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_default_extra_plus"
+        android:contentDescription="@string/cd_repository_icon_background"
+        android:src="@drawable/ic_repo_template"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:tint="@color/material_on_background_emphasis_medium" />
+
+    <TextView
+        android:id="@+id/tvTextBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_default_half"
+        android:paddingHorizontal="@dimen/margin_default_extra"
+        android:text="@string/label_on_launcher"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivIconBackground" />
+
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRepos"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_zero"
-        android:layout_marginHorizontal="@dimen/layout_half_padding"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:itemCount="5"
         tools:listitem="@layout/item_repo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
