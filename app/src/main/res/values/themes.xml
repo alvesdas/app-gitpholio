@@ -1,5 +1,5 @@
 <resources>
-    <style name="Theme.AppRepositories" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.Gitpholio" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/primary_500</item>
         <item name="colorPrimaryVariant">@color/primary_700</item>
         <item name="colorOnPrimary">@color/white</item>
